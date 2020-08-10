@@ -2798,8 +2798,8 @@ ucs4_to_utf16le(const uint32_t* frm, const uint32_t* frm_end, const uint32_t*& f
     {
         if (to_end-to_nxt < 2)
             return codecvt_base::partial;
-            *to_nxt++ = static_cast<uint8_t>(0xFF);
-            *to_nxt++ = static_cast<uint8_t>(0xFE);
+        *to_nxt++ = static_cast<uint8_t>(0xFF);
+        *to_nxt++ = static_cast<uint8_t>(0xFE);
     }
     for (; frm_nxt < frm_end; ++frm_nxt)
     {
